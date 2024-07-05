@@ -1,0 +1,39 @@
+body{
+    margin: 0%;
+    padding: 0%;
+    color: aliceblue;
+    background-color: skyblue;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+span{
+    color: red;
+}
+
+.container{
+    position: absolute;
+    left: 40%;
+    top: 25%;
+    padding: 15px;
+    padding-left: 40px;
+    padding-right: 40px;
+    border-radius: 10px;
+    background-color: black;
+    box-shadow: rgb(208, 98, 98) -5px -5px 5px 5px;
+
+}
+button{
+    border-radius: 6px;
+    font-weight: bolder;
+    padding: 5px;
+    border: 2px solid white;
+    background-color: skyblue;
+    cursor: pointer;
+    margin-top: 6%;
+    margin-bottom: 8%;
+}
+input{
+    outline: none;
+    padding: 7px;
+    border-radius: 8px;
+}
