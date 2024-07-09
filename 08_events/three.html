@@ -16,16 +16,16 @@
     const saydate = function(str){
         console.log(str,Date.now());
     }
-//    const setinterval = setInterval(saydate,3000,"hi")
-   document.querySelector('#start')
-   .addEventListener('click',function(){
-    setInterval(saydate,3000,"hi")
-    console.log('started');
-   })
+   const setinterval = setInterval(saydate,3000,"hi")
+//    document.querySelector('#start')
+//    .addEventListener('click',function(){
+     
+//     console.log('started');
+//    })
 
    document.querySelector('#stop')
    .addEventListener('click',function(){
-    clearInterval(setInterval(saydate,3000,"hi"))
+    clearInterval(setinterval)
     console.log('stopped');
    })
    
