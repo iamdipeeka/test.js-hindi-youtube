@@ -3,9 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>react</title>
 </head>
 <body>
-    
+    <button>button click</button>
 </body>
+
+<script>
+    class react{
+        constructor(){
+            this.library="react"
+            this.server = "https:/localhost:300"
+
+            //requirement = jese hi page create ho object bn jaye react k
+            //button k reference chaiye and click krne pe button click submit ho jae
+             document
+             .querySelector('button')
+             .addEventListener('click',this.handleclick.bind(this))
+            //bind use krne se this ke andr sb this k hr chiz k access mil jaega
+
+        }
+
+        //server ni aa rha h  click krne pe v to bind krne k liye bind use krnge
+        handleclick(){
+            console.log("button clicked");
+            console.log(this);
+        }
+    }
+
+    const App = new react()
+
+
+</script>
 </html>
