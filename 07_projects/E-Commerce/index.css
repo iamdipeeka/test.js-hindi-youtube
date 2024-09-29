@@ -18,7 +18,7 @@ h2{
 
 h4{
     font-size: 18px; 
-     color: rgb(35, 130, 32);
+     /* color: rgb(35, 130, 32); */
      font-weight: 700;
 }
 
@@ -50,6 +50,19 @@ button.normal{
     border-radius: 4px;
     cursor: pointer;
     border: none;
+    outline: none;
+    transition: 0.2s;
+}
+
+button.white{
+    font-size: 12px;
+    font-weight: 600;
+    padding:10px 17px ;
+    color:azure;
+    background-color:transparent;
+    border-radius: 4px;
+    cursor: pointer;
+    border: 1px solid whitesmoke;
     outline: none;
     transition: 0.2s;
 }
@@ -278,5 +291,55 @@ body{
     background: #1e9290;
     color: #E3E6F3;
 }
+
+#sm-banner{
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+#sm-banner  .banner-box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 12px;
+    background-image: url("img/banner/b17.jpg");
+    min-width:580px;
+    height:50vh;
+    background-size: cover;
+    background-position: center;
+}
+
+#sm-banner #banner-box2{
+    background-image: url("img/banner/b10\ \(1\).jpg");
+}
+
+
+
+
+#sm-banner h4{
+    color: aliceblue;
+    font-size: 20px; 
+    font-weight: 900;
+
+}
+
+#sm-banner span{
+    color: aliceblue;
+    font-size: 13px; 
+    font-weight: 600;
+    padding-bottom: 15px;
+
+}
+
+#sm-banner .banner-box:hover button{
+    background-color: #64b3b2;
+    border: 1px solid rgb(12, 53, 12);
+}
+
+
+
 
 
