@@ -17,8 +17,9 @@ h2{
 }
 
 h4{
-    font-size: 20px;
-    color: #223;
+    font-size: 18px; 
+     color: rgb(35, 130, 32);
+     font-weight: 700;
 }
 
 h6{
@@ -38,6 +39,19 @@ p{
 
 .section-m1{
     margin: 40px 0;
+}
+
+button.normal{
+    font-size: 14px;
+    font-weight: 600;
+    padding:15px 30px ;
+    color:#000;
+    background-color: whitesmoke;
+    border-radius: 4px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    transition: 0.2s;
 }
 
 body{
@@ -161,3 +175,108 @@ body{
     color: #1e9290;
     background-color: lightpink;
 }
+
+#product1{
+    text-align: center;
+
+}
+
+#product1 .pro-container{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 18px;
+    flex-wrap: wrap;
+}
+
+#product1 .pro{
+     width:23%;
+     min-width: 250px;
+     padding: 10px 12px;
+     border:1px solid #d8dedb;
+     border-radius: 25px;
+     cursor: pointer;
+     box-shadow: 20px 17px 32px rgb(235, 234, 234);
+     margin:15px 0;
+     transition: 0.3s ease;
+
+}
+
+#product1 .pro:hover{
+    box-shadow: 20px 20px 35px rgb(170, 169, 169);
+}
+
+#product1 .pro img{
+    width:224px;
+    height: 298px;
+    border-radius: 11px;
+}
+
+#product1 .pro .des{
+    text-align: start;
+    padding: 10px 0;
+}
+
+#product1 .pro .des span{
+    color: #4e4d4d;
+    font-size: 12px;
+}
+
+#product1 .pro .des h5{
+    padding-top: 5px;
+    color: black;
+    font-size: 14px;
+}
+#product1 .pro .des i {
+    font-size: 12px;
+    color: rgba(246, 222, 15, 0.863);
+}
+
+#product .pro .des h4 {
+    padding-top: 7px;
+    font-size: 17px;
+    font-weight: 700;
+    color: #53c5c3;
+}
+
+#product1 .pro .cart{
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 50px ;
+    background-color: #b0eabf;
+    font-weight: 500;
+    color: rgb(35, 130, 32);
+    border:1px solid   #b8d8c8;
+    
+   
+}
+
+#banner{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-image: url("img/banner/b2.jpg");
+    width:100%;
+    height:40vh;
+    background-size: cover;
+    background-position: center;
+}
+
+#banner h2{
+    color:#fff;
+    font-size: 30px;
+    padding:10px 0 ;
+}
+
+#banner h2 span{
+    color: red;
+}
+
+#banner button:hover{
+    background: #1e9290;
+    color: #E3E6F3;
+}
+
+
