@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="./index.css">
+</head>
+<body>
+    <div class="calculator">
+        <input type="text" placeholder="0" class="display" id="display" disabled>
+        <div>
+            <button style="color: turquoise;" onclick="clearDisplay()">AC</button>
+            <button style="color: turquoise;" onclick="deleteLast()">DEL</button>
+            <button style="color: turquoise;" onclick="calculatePercentage()">%</button>
+            <button style="color: turquoise; font-size:x-large;" onclick="appendCharacter('/')">÷</button>
+        </div>
+        <div>
+            <button onclick="appendCharacter('7')">7</button>
+            <button onclick="appendCharacter('8')">8</button>
+            <button onclick="appendCharacter('9')">9</button>
+            <button style="color: turquoise;"  onclick="appendCharacter('*')">×</button>
+        </div>
+        <div>
+            <button onclick="appendCharacter('4')">4</button>
+            <button onclick="appendCharacter('5')">5</button>
+            <button onclick="appendCharacter('6')">6</button>
+            <button style="color: turquoise;" onclick="appendCharacter('-')">–</button>
+        </div>
+        <div>
+            <button onclick="appendCharacter('1')">1</button>
+            <button onclick="appendCharacter('2')">2</button>
+            <button onclick="appendCharacter('3')">3</button>
+            <button style="color: turquoise;"  onclick="appendCharacter('+')">+</button>
+        </div>
+        <div>
+            <button onclick="appendCharacter('0')">0</button>
+            <button onclick="appendCharacter('00')">00</button>
+            <button onclick="appendCharacter('.')">•</button>
+            <button style="color: turquoise;" class="equal" onclick="calculateResult()">=</button>
+        </div>
+    </div>
+    
+    <script>
+        const display = document.getElementById('display');
+
+        function appendCharacter(character) {
+            if (display.value === '0') {
+                display.value = character; // Replace initial '0'
+            } else {
+                display.value += character; // Append the new character
+            }
+        }
+
+        function clearDisplay() {
+            display.value = '0'; // Reset display to '0'
+        }
+
+        function deleteLast() {
+            display.value = display.value.slice(0, -1) || '0'; // Remove the last character
+        }
+
+        // New function for percentage calculation
+        function calculatePercentage() {
+            try {
+                // Convert the current number to percentage
+                display.value = (parseFloat(display.value) / 100).toString();
+            } catch (error) {
+                display.value = 'Error'; // In case something goes wrong
+            }
+        }
+
+        function calculateResult() {
+            try {
+                display.value = eval(display.value) || '0'; // Evaluate the expression
+            } catch (error) {
+                display.value = 'Error'; // Handle invalid expressions
+            }
+        }
+    </script>
+</body>
+</html>
